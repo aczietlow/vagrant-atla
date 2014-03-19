@@ -1,0 +1,19 @@
+#server
+install php5-xsl module
+
+enable basic sendmail
+
+#atla
+Create new database for fresh install
+
+Install site with atla profile
+	atlaprofile --site-name="ATLA" --account-pass=admin --db-url=mysql://root:root@localhost/atla_dev_01
+
+Install dependencies with composer
+	drush composer-manager install -y
+
+Run migration of test content
+	drush migrate-import --all
+
+create drush alias file
+
